@@ -45,7 +45,7 @@ df["resta"] = y_resta
 df["multiplicacion"] = y_mult
 df["division"] = y_div
 df.to_csv("dataset_operaciones.csv", index=False)
-print("✅ Dataset guardado como 'dataset_operaciones.csv'")
+print(" Dataset guardado como 'dataset_operaciones.csv'")
 
 # ============================
 # 3. Normalización
@@ -79,14 +79,14 @@ modelo_mult.fit(X_norm, y_mult, epochs=100, verbose=0)
 modelo_div = crear_modelo()
 modelo_div.fit(X_norm, y_div_norm, epochs=100, verbose=0)
 
-print("✅ Modelos entrenados correctamente.")
+print(" Modelos entrenados correctamente.")
 
 # ============================
 # 6. Prueba con un ejemplo
 # ============================
 entrada = np.array([[25, 5]]) / 100.0
 
-print("\n📊 Prueba con entrada: [25, 5]")
+print("\n Prueba con entrada: [25, 5]")
 print("Suma:            ", modelo_suma.predict(entrada)[0][0])
 print("Resta:           ", modelo_resta.predict(entrada)[0][0])
 print("Multiplicación:  ", modelo_mult.predict(entrada)[0][0])
